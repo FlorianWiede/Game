@@ -23,15 +23,34 @@ class Raumschiff {
   }
 
   public void move() {
-    if (key == 'w') {
-      
+    if (keyPressed) {
+      if (key == 'w') {
+        y1--;
+        y2--;
+        y3--;
+        y4--;
+      }
+      if (key == 'a') {
+        x1--;
+        x2--;
+        x3--;
+        x4--;
+      }
+      if (key == 's') {
+        y1++;
+        y2++;
+        y3++;
+        y4++;
+      }
+      if (key == 'd') {
+        x1++;
+        x2++;
+        x3++;
+        x4++;
+      }
     }
-    if (key == 'a') {
-    }
-    if (key == 's') {
-    }
-    if (key == 'd') {
-    }
+    triangle(x1, y1, x2, y2, x3, y3);
+    triangle(x2, y2, x3, y3, x4, y4);
   }
 
   public void shoot() {
